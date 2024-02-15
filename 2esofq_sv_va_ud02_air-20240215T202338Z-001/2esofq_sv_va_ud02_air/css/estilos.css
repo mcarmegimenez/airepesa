@@ -1,0 +1,882 @@
+
+*{ 
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  background-color: #e6e6e6;
+}
+
+
+@font-face {
+            font-family: ff1;
+            src: url('fonts/SourceSansPro-Regular.eot');
+            src: local('?'), url('fonts/SourceSansPro-Regular.woff') format('woff'), url('fonts/SourceSansPro-Regular.ttf') format('truetype'), url('fonts/SourceSansPro-Regular.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+             } 
+
+            .estilos_normales{
+            font-family: ff1; 
+            font-size: 16px;      
+            color: #333333; 
+            line-height: 19px;
+                   
+            }
+      
+
+@font-face {
+            font-family: ff0;
+            src: url('fonts/SourceSansPro-Semibold.eot');
+            src: local('?'), url('fonts/SourceSansPro-Semibold.woff') format('woff'), url('fonts/SourceSansPro-Semibold.ttf') format('truetype'), url('fonts/SourceSansPro-Semibold.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+             } 
+  
+            .estilos_cabecera{
+            font-family: ff0;                 
+            color: #333333;                      
+            }
+      
+            .20px{
+            font-size: 20px;      
+            }
+      
+      
+@font-face {
+            font-family: ff2;
+            src: url('fonts/Aeromatics_NC.eot');
+            src: local('?'), url('fonts/Aeromatics_NC.woff') format('woff'), url('fonts/Aeromatics_NC.ttf') format('truetype'), url('fonts/Aeromatics_NC.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+             } 
+
+            .estilos_digitales{
+            font-family: ff2;            
+            font-size: 16px;      
+            color: #333333; 
+            line-height: 19px;
+
+            }
+#fondo{
+  display: block;
+  position: relative;
+  margin: 0 auto; 
+  border: 0px solid black;
+  background-color: transparent;
+  padding-top: 1px;
+  z-index: 0;
+}
+
+#fondoFoto{
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 180%;
+  width: 100%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../data/imgns/.jpg); 
+  padding-top: 1px;
+  z-index: 0;
+}
+
+#portadaFoto{
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../data/imgns/portadafoto.jpg); 
+  z-index: 20000;
+}
+
+#top{
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width:100%;
+  height:10.83%;        
+  background-color: #009ca4;
+  text-align: left;
+  z-index: 30000;    
+        }
+    
+#top > p{
+  margin-left: 2%;
+  margin-top: 1.8%;
+}
+    
+#bottom{
+  display: block;
+  position: absolute;
+  top: 98.84%;
+  left: 0%;
+  width:100%;
+  height:1.16%;
+  max-height: 8px;    
+  background-color:  #009ca4;
+  z-index: 30000;   
+        }
+    
+#logo{    
+  display: block;
+  position: absolute; 
+  background-image: url(../data/imgns/logo/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;     
+  z-index: 100000;   
+}   
+
+#canvas{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: 0px solid black;
+  z-index: 30;
+}
+
+#slider{
+        position: absolute;
+        display: block;
+        top: 19%;
+        left: 11%;        
+        height: 69%;
+        width: 3%;        
+        z-index: 150;
+        border: 0px solid black;
+        margin-right: 0px;
+        padding-right: 0px;   
+}
+
+#slider_boton{
+        position: relative;
+        display: block;
+        top: 0%;
+        left: -250%;        
+        height: 55%;
+        width: 600%;        
+        z-index: 5000;
+        background-image: url(../data/imgns/pusher.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;
+        margin-right: -1px;
+        padding: 0px;  
+        border-radius: 4%;        
+}
+
+#pusherBase{
+        position: absolute;
+        display: block;
+        top: 54%;
+        left: 2.5%;        
+        height: 44%;
+        width: 20%;        
+        z-index: 200;
+        background-image: url(../data/imgns/pusher_base.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;      
+}
+
+#valvConexion{
+        display: block;
+        position: absolute;    
+        top: 68%;
+        left: 20%;        
+        height: 24%;
+        width: 15%;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 200% 100%;
+        background-image: url(../data/imgns/valv_conexion.png);  
+        background-position: 0% 0%;       
+        z-index: 200; 
+        border: 0px solid red; 
+        cursor: pointer;   
+}
+
+.pelota{
+        display: block;
+        position: absolute;    
+        top: 50%;
+        left: 41%;        
+        height: 24%;
+        width: 18%;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;         
+        z-index: 50; 
+        border: 0px solid black;    
+}
+#pelota{
+       background-image: url(../data/imgns/pelota0.png);
+}
+#pelota1{
+       display: none;
+       background-image: url(../data/imgns/pelota1.png);
+}
+#pelota2{
+       display: none;
+       background-image: url(../data/imgns/pelota2.png);
+}
+#pelota3{
+       display: none;
+       background-image: url(../data/imgns/pelota3.png);
+}
+#pelota4{
+       display: none;
+       background-image: url(../data/imgns/pelota4.png);
+}
+
+#bascula{
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 40%;        
+        height: 26%;
+        width: 20%;        
+        z-index: 20;
+        background-image: url(../data/imgns/bascula.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;      
+}
+
+#basculaPantalla{
+        position: absolute;
+        display: block;
+        top: 79%;
+        left: 41%;        
+        height: 8.8%;
+        width: 15.6%;        
+        z-index: 20;
+        background-color: transparent;
+        border: 0px solid black;
+        text-align: center;      
+}
+#basculaPantalla > p{
+        margin-top: 9%;
+}
+
+.boton{
+        display: none;
+        position: absolute;           
+        height: 24%;
+        width: 15%;        
+        z-index: 50; 
+        border: 0px solid red; 
+        cursor: pointer;  
+        border-radius: 7px 7px 7px 7px;
+        -moz-border-radius: 7px 7px 7px 7px;
+        -webkit-border-radius: 7px 7px 7px 7px; 
+        text-align: center;
+        color: #ffffff;
+}
+
+#botonComprobarPeso{
+        top: 79%;
+        left: 51.4%;
+        height: 9%;
+        width: 13%;
+        background-image: url(../data/imgns/boton_bascula.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+}
+
+
+#botonContinuar{
+        display: none;
+        top: 86%;
+        left: 80%;
+        height: 9%;
+        width: 17%;
+        background-color: #8064a2;
+}
+
+#botonContinuar > p{
+        margin-top: 9%;
+}
+
+#botonCalculo{
+        display: none;
+        top: 84%;
+        left: 7.2%;
+        height: 10%;
+        width: 22%;
+        background-color: #8064a2;
+}
+
+#botonCalculo > p{
+        margin-top: 9%;
+}
+
+#botonFase3{
+        display: none;
+        top: 86%;
+        left: 80%;
+        height: 9%;
+        width: 17%;
+        background-color: #8064a2;
+}
+
+#botonFase3 > p{
+        margin-top: 9%;
+}
+
+#botonReinicio{
+        display: none;
+        top: 86%;
+        left: 80%;
+        height: 9%;
+        width: 17%;
+        background-color: #8064a2;
+}
+
+#botonReinicio > p{
+        margin-top: 9%;
+}
+
+.tabla{
+        display: block;
+        position: absolute;         
+        height: 8%;       
+        z-index: 50; 
+        border: 0.1em solid #fff; 
+        color: black;
+  
+}
+
+.tabla > p{
+        margin-top: 3%;
+}
+.colorTabla1{
+        background-color: #d7d2df;
+}
+.colorTabla2{
+        background-color: #eceaf0;
+}
+.col1 > p{
+        margin-top: 5%;
+}
+.col2 > p{
+        margin-top: 8%;
+}
+
+.colorTablaEncabezado{
+        background-color: #8064a2;
+}
+.col1{
+    left: 65%;
+    width: 21%;
+}
+.col2{
+    left: 86%;
+    width: 13%;
+}
+
+.row1{
+    top: 12%;
+    height: 14%; 
+    color: #fff;
+}
+.row2{
+    top: 26%;
+}
+.row3{
+    top: 34%;
+}
+.row4{
+    top: 42%;
+}
+.row5{
+    top: 50%;
+}
+.row6{
+    top: 58%;
+}
+
+#pontePrueba{
+        display: none;
+        position: absolute;
+        top: 15%;
+        left: 10%;        
+        height: 10%;
+        width: 35%;        
+        z-index: 20;
+        background-color: #8064a2;
+        border: 0.1em solid black; 
+        color: #fff;     
+}
+#pontePrueba > p{
+        margin-top: 5%;
+}
+#pontePruebaText{
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 10%;        
+        height: 20%;
+        width: 35%;        
+        z-index: 20;
+        background-color: #d7d2df;
+        border: 0.1em solid black;      
+}
+#pontePruebaText > p{
+        margin-top: 10%;
+}
+.respuesta{
+        display: none;
+        position: absolute;
+        left: 20%;        
+        height: 10%;
+        width: 15%;        
+        z-index: 20;
+        background-color: green;
+        border: 0.1em solid black; 
+        cursor: pointer;
+}
+.respuesta > p{
+        margin-top: 12%;
+}
+#resp1{
+        top: 55%;
+        background-color: #eceaf0;
+}
+#resp2{
+        top: 67%;
+        background-color: #eceaf0;
+}
+#resp3{
+        top: 79%;
+        background-color: #eceaf0;
+}
+
+.resp_2{
+        display: none;
+        position: absolute;
+        left: 11%;        
+        height: 10%;
+        width: 15%;        
+        z-index: 20;
+        background-color: green;
+        border: 0.1em solid black; 
+        cursor: pointer;
+        text-align: center;
+}
+.resp_2 > p{
+        margin-top: 12%;
+}
+#resp1_2{
+        top: 41%;
+        background-color: #eceaf0;
+}
+#resp2_2{
+        top: 55%;
+        background-color: #eceaf0;
+}
+#resp3_2{
+        top: 69%;
+        background-color: #eceaf0;
+}
+
+.aula{
+        position: absolute;
+        display: none;
+        top: 49%;
+        left: 39%;        
+        height: 44%;
+        width: 56%;        
+        z-index: 20;   
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;      
+}
+#aula{
+        background-image: url(../data/imgns/aula.png);
+}
+#aireAula{
+        background-image: url(../data/imgns/aire.png);
+}
+
+.over{
+        position: absolute;
+        display: none;       
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;      
+}
+
+#profOver{
+        top: 62%;
+        left: 77%;  
+        height: 17%;
+        width: 6%;      
+        z-index: 100;
+}
+#mesasOver{
+        top: 71%;
+        left: 80%;  
+        height: 16%;
+        width: 15%;      
+        z-index: 70;
+}
+
+#textoIndicaOver{
+        position: absolute;
+        display: none;
+        top: 35%;
+        left: 39%;        
+        height: 11%;
+        width: 56%;       
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;
+        z-index: 50;
+        text-align: left;
+}
+
+#textoIndicaPesoOver{
+        position: absolute;
+        display: none;
+        top: 35%;
+        left: 45%;        
+        height: 11%;
+        width: 15%;       
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;
+        z-index: 50;
+        text-align: right;
+}
+
+#textoIndicaInfo{
+        position: absolute;
+        display: none;
+        top: 20%;
+        left: 39%;        
+        height: 11%;
+        width: 56%;       
+        background-image: url(../data/imgns/cartel2.png);
+        z-index: 20;
+        text-align: left;
+        cursor: pointer;
+}
+#textoIndicaInfo > p{
+        margin-top: 1%;
+        margin-left: 5%;
+}
+
+#textoIndicaResp{
+        position: absolute;
+        display: none;
+        top: 20%;
+        left: 2.5%;        
+        height: 16%;
+        width: 31%;       
+        background-color: #d7d2df;
+        z-index: 20;
+        text-align: left;
+        border: 0.1em solid black;
+}
+#textoIndicaResp > p{
+        margin-top: 8%;
+        margin-left: 8%;
+}
+
+#textoMatematicas{
+        position: absolute;
+        display: none;
+        top: 28%;
+        left: 3%;        
+        height: 27%;
+        width: 48%;       
+        background-color: #d7d2df;
+        z-index: 50;
+        text-align: left;
+}
+#textoMatematicas > p{
+        margin-top: 3%;
+        margin-left: 7%;
+}
+
+#textoFase3{
+        position: absolute;
+        display: none;
+        top: 15%;
+        left: 39%;        
+        height: 11%;
+        width: 56%;       
+        background-image: url(../data/imgns/cartel2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: 20;
+        text-align: left;
+        cursor: pointer;
+}
+#textoFase3 > p{
+        margin-top: 1%;
+        margin-left: 5%;
+}
+
+.maleta{
+        display: none;
+        position: absolute;    
+        top: 74%;
+        left: 8%;        
+        height: 19%;
+        width: 15%;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;        
+        z-index: 200; 
+        border: 0px solid red; 
+        cursor: pointer;   
+}
+
+#maleta0{
+        background-image: url(../data/imgns/maleta0.png); 
+}
+#maleta1{
+        background-image: url(../data/imgns/maleta1.png); 
+}
+#maleta2{
+        background-image: url(../data/imgns/maleta2.png); 
+}
+#maleta3{
+        background-image: url(../data/imgns/maleta3.png); 
+}
+#maleta4{
+        background-image: url(../data/imgns/maleta4.png); 
+}
+
+#pesoMaleta{
+        display: none;
+        position: absolute;    
+        top: 89%;
+        left: 15%;        
+        height: 1%;
+        width: 10%;
+        background-color: transparent;       
+        z-index: 200; 
+        border: 0px solid red;    
+}
+
+#bomba{
+        display: none;
+        position: absolute;    
+        top: 77%;
+        left: 11%;        
+        height: 12%;
+        width: 35%;
+        background-color: transparent;
+        background-image: url(../data/imgns/bomba.png); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;        
+        z-index: 150; 
+        border: 0px solid red; 
+        cursor: pointer;   
+}
+
+.profesor{
+        display: none;
+        position: absolute;    
+        top: 59%;
+        left: 5.5%;        
+        height: 32.8%;
+        width: 24.5%;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;          
+}
+#profesor1{
+        background-image: url(../data/imgns/profesor1.jpg); 
+        z-index: 500;
+}
+#profesor2{
+        background-image: url(../data/imgns/profesor2.jpg); 
+        z-index: 450
+}
+
+#bocadillo{
+        display: none;
+        position: absolute;    
+        top: 43%;
+        left: 5.5%;        
+        height: 21%;
+        width: 25%;
+        background-color: transparent;
+        background-image: url(../data/imgns/bocadillo.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%; 
+        z-index: 1000;         
+}
+
+#bocadillo >p{
+        margin-top: 13%;
+        margin-left: 1%;
+}
+
+.cartel{
+        display: none;
+        position: absolute;           
+        height: 21%;
+        width: 36%;   
+        background-color: transparent;
+        background-image: url(../data/imgns/cartel.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%; 
+        z-index: 1000; 
+        cursor: pointer;
+        text-align: left;        
+}
+
+.cartel > p{
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+}
+
+#cartelIntro{
+        top: 19%;
+        left: 24%; 
+}   
+
+#flechas{
+        position: absolute;
+        display: none;
+        top: 67%;
+        left: 43%;        
+        height: 17%;
+        width: 11%;        
+        z-index: 100;   
+        background-image: url(../data/imgns/flechas.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0px solid black;      
+}
+
+.medidas{
+        display: none;
+        position: absolute;           
+        height: 1%;
+        width: 6%;   
+        background-color: transparent;
+        z-index: 100;        
+}
+#alto{
+        top: 64%;
+        left: 34%; 
+}
+#ancho{
+        top: 81%;
+        left: 39%; 
+}
+#largo{
+        top: 84%;
+        left: 70%; 
+}
+
+.tapa{
+        position: absolute;
+        display: block;  
+        z-index: 2000;   
+        background-color: transparent;
+        border: 0px solid black;      
+}
+
+#tapa1{
+        top: 62%;
+        left: 18%;        
+        height: 32%;
+        width: 25%; 
+}
+#tapa2{
+        top: 11%;
+        left: 0%;        
+        height: 86%;
+        width: 25%; 
+}
+
+
+#bocadillo, div, p{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+            #preloader{
+            display: block;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            z-index: 1000000000000000000000;
+            border: 0px solid red;
+
+            }
+ 
+            #preloaderBar{
+            display: block;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 0%;
+            background-color: #F9FF80;
+            z-index: 20000;
+            border: 0px solid red;
+
+
+             }
+
+            #preloaderBar_cont{
+            display: block;
+            position: absolute;
+            top: 45%;
+            left: 15%;
+            height: 8%;
+            width: 61%;
+            background-color: #CCCCCC;
+            z-index: 15000;
+            border: 0px solid red;
+            border-radius:8px;
+            -webkit-border-radius:8px;
+            -moz-border-radius:8px;
+             overflow: hidden;
+
+            }
+
+            #preloaderPercent{            
+            padding-left: 0px;
+            padding-top: 0px;
+            display: block;
+            position: absolute;
+            top: 47%;
+            left: 39%;
+            height: 6.33%;
+            width:  16.25%;
+            background-color: transparent;  
+            z-index: 25000;
+            border: 0px solid red;
+          }

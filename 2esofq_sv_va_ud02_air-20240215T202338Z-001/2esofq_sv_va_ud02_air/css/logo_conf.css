@@ -1,0 +1,10 @@
+﻿	
+#logo{
+
+	    left: 802px;   /* poner aquí la distancia del margen izquierdo del logo */
+		width: 151px;   /* poner aquí el ancho del logo*/
+		
+		height: 51px;  /* poner aquí el alto del logo (esto no se debería tocar)*/
+		top: 7px;     /* poner aquí la distancia del logo a el margen superior de la animación (esto no se debería tocar)*/
+		
+     }

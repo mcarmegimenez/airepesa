@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es" xml:lang="es"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="libro de texto SM">
+    <meta name="keywords" content="Libro, Curso, Texto">
+    <!--<meta name="viewport" content="initial-scale=1, width=device-width">-->
+
+
+
+    <title>L’aire pesa?</title>
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/logo_conf.css" media="screen"/>
+    <script src="js/plugins/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/plugins/jquery-ui.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/plugins/jqueryuitouchpunch.js"></script>
+    <script type="text/javascript" src="data/textos/textos.js"></script>
+    
+  </head>
+
+  <body style="text-align:center;margin-top:0;" cz-shortcut-listen="true">
+
+    <div id="fondo">
+
+        <div id='logo'></div>
+        <div id="fondoFoto"></div>
+        <div id='top'></div>
+        <div id='bottom'></div>
+
+        <div id='cartelIntro' class="cartel"></div>
+
+        <div id='valvConexion'></div>
+        <div id='pelota' class="pelota"></div>
+        <div id='pelota1' class="pelota"></div>
+        <div id='pelota2' class="pelota"></div>
+        <div id='pelota3' class="pelota"></div>
+        <div id='pelota4' class="pelota"></div>
+
+        <div id='bascula' class="pelota"></div>
+        <div id='basculaPantalla' class="pelota"></div>
+
+        <div id='aula' class="aula"></div>
+        <div id='aireAula' class="aula"></div>
+
+        <div id='aireOver' class="over"></div>
+        <div id='profOver' class="over"></div>
+        <div id='mesasOver' class="over"></div>
+
+        <div id='alto' class="medidas"></div>
+        <div id='ancho' class="medidas"></div>
+        <div id='largo' class="medidas"></div>
+
+        <div id='textoIndicaInfo' class="over"></div>
+        <div id='textoIndicaResp' class=""></div>
+        <div id='textoIndicaOver' class="over"></div>
+        <div id='textoIndicaPesoOver' class="over"></div>
+        <div id='textoMatematicas' class=""></div>
+        <div id='textoFase3' class=""></div>
+
+        <div id='introFase3' class=""></div>
+
+        <div id='botonComprobarPeso' class="boton"></div>
+        <div id='botonContinuar' class="boton"></div>
+        <div id='botonCalculo' class="boton"></div>
+        <div id='botonFase3' class="boton"></div>
+        <div id='botonReinicio' class="boton"></div>
+
+        <div id='bomba' class=""></div>
+
+        <div id='maleta0' class="maleta"></div>
+        <div id='maleta1' class="maleta"></div>
+        <div id='maleta2' class="maleta"></div>
+        <div id='maleta3' class="maleta"></div>
+        <div id='maleta4' class="maleta"></div>
+
+        <div id='pesoMaleta' class=""></div>
+
+        <div id='profesor1' class="profesor"></div>
+        <div id='profesor2' class="profesor"></div>
+        <div id='bocadillo' class=""></div>
+   
+        <canvas id="canvas" width="960" height="600"></canvas>
+
+        <div id="slider" class="slider_opacidad div">
+           <div id="slider_boton" class="slider"></div>
+        </div>
+
+        <!-- TABLÓN -->
+
+        <div id="tabla1" class="tabla col1 row1 colorTablaEncabezado"></div>
+        <div id="tabla2" class="tabla col1 row2 colorTabla1"></div>
+        <div id="tabla3" class="tabla col1 row3 colorTabla2"></div>
+        <div id="tabla4" class="tabla col1 row4 colorTabla1"></div>
+        <div id="tabla5" class="tabla col1 row5 colorTabla2"></div>
+        <div id="tabla6" class="tabla col1 row6 colorTabla1"></div>
+        <div id="tabla7" class="tabla col2 row1 colorTablaEncabezado"></div>
+        <div id="tabla8" class="tabla col2 row2 colorTabla1"></div>
+        <div id="tabla9" class="tabla col2 row3 colorTabla2"></div>
+        <div id="tabla10" class="tabla col2 row4 colorTabla1"></div>
+        <div id="tabla11" class="tabla col2 row5 colorTabla2"></div>
+        <div id="tabla12" class="tabla col2 row6 colorTabla1"></div>
+
+        <!--  fin de la tabla  -->
+
+        <div id="pontePrueba" class="prueba"></div>
+        <div id="pontePruebaText" class="prueba"></div>
+        <div id="resp1" class="respuesta prueba"></div>
+        <div id="resp2" class="respuesta prueba"></div>
+        <div id="resp3" class="respuesta prueba"></div>
+
+        <div id="resp1_2" class="resp_2"></div>
+        <div id="resp2_2" class="resp_2"></div>
+        <div id="resp3_2" class="resp_2"></div>
+
+        <div id="flechas" class=""></div>
+
+        <div id='pusherBase' class=""></div>
+
+        <div id="tapa1" class="tapa"></div>
+        <div id="tapa2" class="tapa"></div>
+
+        <div id='preloader' class='preloader_stuff'>
+                  
+            <div id='preloaderPercent' class='estilos_normales preloader_stuff'></div>
+
+           <div id='preloaderBar_cont' class='preloader_stuff'>                                 
+               
+              <div id='preloaderBar' class='preloader_stuff'></div>
+
+           </div>
+
+        </div>
+
+        <audio id='bien' preload="auto">
+                              <source src="data/audio/bien.ogg" type="audio/ogg">
+                              <source src="data/audio/bien.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='pop' preload="auto">
+                                  <source src="data/audio/pop.ogg" type="audio/ogg">
+                                  <source src="data/audio/pop.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='clip' preload="auto">
+                                  <source src="data/audio/clip.ogg" type="audio/ogg">
+                                  <source src="data/audio/clip.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='clap' preload="auto">
+                                  <source src="data/audio/clap.ogg" type="audio/ogg">
+                                  <source src="data/audio/clap.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='click' preload="auto">
+                                  <source src="data/audio/click.ogg" type="audio/ogg">
+                                  <source src="data/audio/click.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='bombaAire' preload="auto">
+                                  <source src="data/audio/bomba.ogg" type="audio/ogg">
+                                  <source src="data/audio/bomba.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='balon_aire' preload="auto">
+                                  <source src="data/audio/balon_aire.ogg" type="audio/ogg">
+                                  <source src="data/audio/balon_aire.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='mal' preload="auto">
+                                  <source src="data/audio/mal.ogg" type="audio/ogg">
+                                  <source src="data/audio/mal.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='aspirador' preload="auto">
+                                  <source src="data/audio/aspirador.ogg" type="audio/ogg">
+                                  <source src="data/audio/aspirador.mp3" type="audio/mpeg">               
+        </audio>
+        <audio id='grito' preload="auto">
+                                  <source src="data/audio/grito.ogg" type="audio/ogg">
+                                  <source src="data/audio/grito.mp3" type="audio/mpeg">               
+        </audio>
+       
+       
+    </div>
+
+    <script src="js/func.js"></script>
+
+  </body>
+</html>
